@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>加拿大特殊需求/残障人士资助与支持项目汇总</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #5b6673;
+      --line: #d8dee7;
+      --soft: #f5f7fa;
+      --panel: #ffffff;
+      --accent: #0c6b6f;
+      --accent-2: #8a4f18;
+      --accent-3: #2f5a9a;
+      --tag: #e8f3f3;
+      --warn: #fff5dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif;
+      color: var(--ink);
+      background: #eef2f6;
+      line-height: 1.62;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: #075e86;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(7, 94, 134, 0.28);
+    }
+
+    a:hover {
+      border-bottom-color: currentColor;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--panel);
+      min-height: 100vh;
+      box-shadow: 0 24px 80px rgba(23, 33, 43, 0.12);
+    }
+
+    header {
+      padding: 48px 54px 32px;
+      background: linear-gradient(135deg, #f8fbfd 0%, #edf6f4 48%, #fff7ec 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      max-width: 860px;
+    }
+
+    .subtitle {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 17px;
+      margin: 16px 0 0;
+    }
+
+    .meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      color: #34404d;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 36px 54px 60px;
+    }
+
+    .notice {
+      background: var(--warn);
+      border: 1px solid #e8d8a5;
+      border-left: 5px solid var(--accent-2);
+      padding: 16px 18px;
+      margin: 0 0 26px;
+      border-radius: 6px;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 24px 0 34px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--soft);
+      color: #25313e;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section {
+      margin: 34px 0 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin: 22px 0 10px;
+      letter-spacing: 0;
+    }
+
+    h4 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .card h3,
+    .card h4 {
+      margin-top: 0;
+    }
+
+    .tagrow {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin: 9px 0 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      border-radius: 5px;
+      padding: 3px 8px;
+      background: var(--tag);
+      color: #24585a;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 24px;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      vertical-align: top;
+      padding: 10px 11px;
+    }
+
+    th {
+      background: #eef3f8;
+      text-align: left;
+      color: #263441;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #fafbfd;
+    }
+
+    .province {
+      page-break-inside: avoid;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent-3);
+      border-radius: 8px;
+      padding: 18px;
+      margin: 16px 0;
+      background: #fff;
+    }
+
+    .province h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .province small {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .source-list {
+      columns: 2;
+      column-gap: 28px;
+      font-size: 13px;
+    }
+
+    .source-list li {
+      break-inside: avoid;
+      margin-bottom: 7px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .checklist {
+      background: #f5f8fb;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    footer {
+      padding: 24px 54px 42px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      background: #f7f9fb;
+    }
+
+    @media (max-width: 880px) {
+      header,
+      main,
+      footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .toc,
+      .grid,
+      .two {
+        grid-template-columns: 1fr;
+      }
+
+      .source-list {
+        columns: 1;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 14mm;
+        size: A4;
+      }
+
+      body {
+        background: #fff;
+        font-size: 11px;
+      }
+
+      .page {
+        box-shadow: none;
+        max-width: none;
+      }
+
+      header {
+        padding: 20px 0 14px;
+      }
+
+      main {
+        padding: 18px 0 0;
+      }
+
+      footer {
+        padding: 12px 0 0;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 17px;
+        page-break-after: avoid;
+      }
+
+      h3 {
+        font-size: 14px;
+        page-break-after: avoid;
+      }
+
+      .toc,
+      .notice,
+      .card,
+      .province,
+      table {
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: #063c58;
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+         <div class="top-right">
+            <a href="./canada-disability-supports-en.html" target="_self">English</a>
+         </div>
+      </div>
+      <div class="eyebrow">Canada disability and special needs supports</div>
+      <h1>加拿大特殊需求/残障人士资助与支持项目汇总</h1>
+      
+      <p class="subtitle">面向家庭和照护者的实用检索版：汇总联邦政府、十个省和三个地区的主要收入补助、儿童特殊需求、发育障碍服务、辅助器具、照护者 respite、税务和长期储蓄支持。</p>
+      <div class="meta">
+        <span class="pill">整理日期：2026-06-14</span>
+        <span class="pill">语言：中文</span>
+        <span class="pill">资料源：政府/官方项目页面为主</span>
+      </div>
+       
+    </header>
+
+    <main>
+      <div class="notice">
+        <strong>重要提醒：</strong>福利资格、金额、等待名单和申请表会更新。本页适合作为“找入口和列清单”的起点；正式申请前，请打开对应官方链接核对最新金额、居住要求、收入/资产限制、医学证明要求和申请方式。很多项目可叠加，但可能互相影响，尤其是收入支持、CPP-D、保险赔付和就业收入。
+      </div>
+
+      <nav class="toc" aria-label="目录">
+        <a href="#quick-start">快速申请路径</a>
+        <a href="#federal">联邦政府项目</a>
+        <a href="#provincial-summary">各省/地区速览</a>
+        <a href="#provinces">各省/地区详细清单</a>
+        <a href="#documents">准备材料</a>
+        <a href="#sources">官方资料源</a>
+      </nav>
+
+      <section id="quick-start">
+        <h2>快速申请路径</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>成年人，因残障难以工作或收入低</h3>
+            <ul>
+              <li>先查所在省/地区的残障收入支持：如 ODSP、AISH、SAID、PWD、EIA、Social Solidarity 等。</li>
+              <li>同时查联邦 CPP Disability Benefit、Canada Disability Benefit、DTC、RDSP。</li>
+              <li>若有发育障碍、自闭症或 FASD，再查成人发育障碍服务：如 CLBC、PDD、DSO/Passport、DSP 等。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>儿童/青少年有特殊需求</h3>
+            <ul>
+              <li>优先确认是否可申请 DTC；通过 DTC 可能带出 Child Disability Benefit 和 RDSP 资格。</li>
+              <li>查本省儿童特殊需求项目：如安省 ACSD/SSAH/OAP，阿省 FSCD，BC CYSN，曼省 Children’s disABILITY Services。</li>
+              <li>向学校申请 IEP/特殊教育评估，并询问本地儿童治疗、行为支持和 respite 入口。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>需要设备、改造或照护支持</h3>
+            <ul>
+              <li>查辅助器具/医疗设备项目：如安省 ADP、阿省 AADL、BC Medical Equipment and Devices、各省卫生部门设备计划。</li>
+              <li>查 home modification、vehicle modification、respite、community participation、personal support。</li>
+              <li>联系 211、家庭医生、社工、学校或本地 disability service office 转介。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="federal">
+        <h2>联邦政府项目</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>适用对象</th>
+              <th>支持内容</th>
+              <th>申请/入口</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Canada Disability Benefit</strong><br>加拿大残障福利</td>
+              <td>通常面向 18-64 岁、低收入、符合残障条件的人士；与 DTC 和报税状态密切相关。</td>
+              <td>联邦直接收入补助，旨在减少工作年龄残障人士贫困。金额和资格按年度规则核定。</td>
+              <td><a href="https://www.canada.ca/en/services/benefits/disability/canada-disability-benefit.html">Canada Disability Benefit</a></td>
+            </tr>
+            <tr>
+              <td><strong>Disability Tax Credit, DTC</strong><br>残障税务抵免</td>
+              <td>有严重且长期身心功能限制者；由医疗专业人士填写表格，CRA 审核。</td>
+              <td>不可退税税务抵免；也是申请 RDSP、Child Disability Benefit、Canada Disability Benefit 等项目的重要钥匙。</td>
+              <td><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html">DTC 官方页</a></td>
+            </tr>
+            <tr>
+              <td><strong>Child Disability Benefit, CDB</strong><br>儿童残障福利</td>
+              <td>18 岁以下、符合 DTC，且家庭领取 Canada Child Benefit 的儿童。</td>
+              <td>按家庭净收入计算的每月免税福利；通常随 CCB 自动评估。</td>
+              <td><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/child-disability-benefit.html">Child Disability Benefit</a></td>
+            </tr>
+            <tr>
+              <td><strong>CPP Disability Benefit</strong><br>加拿大退休金残障福利</td>
+              <td>未满 65 岁、向 CPP 供款足够，且残障“严重且长期”导致不能规律工作者。</td>
+              <td>每月应税福利；也可能有给受抚养子女的儿童福利。</td>
+              <td><a href="https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html">CPP Disability Benefit</a></td>
+            </tr>
+            <tr>
+              <td><strong>Registered Disability Savings Plan, RDSP</strong><br>注册残障储蓄计划</td>
+              <td>加拿大居民、有 SIN、符合 DTC，且年龄符合开户/供款规则者。</td>
+              <td>长期储蓄工具；可获得 Canada Disability Savings Grant 和 Bond，适合为成年后的生活做长期规划。</td>
+              <td><a href="https://www.canada.ca/en/employment-social-development/programs/disability/savings.html">RDSP / Grant / Bond</a></td>
+            </tr>
+            <tr>
+              <td><strong>Medical Expense Tax Credit 与照护者相关税务抵免</strong></td>
+              <td>残障人士、照护者、支付合格医疗/照护/改造费用的家庭。</td>
+              <td>包括医疗费用、attendant care、无障碍装修、照护者抵免、可转移 DTC 等，需保留收据和证明。</td>
+              <td><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities.html">CRA 残障税务汇总</a></td>
+            </tr>
+            <tr>
+              <td><strong>Opportunities Fund for Persons with Disabilities</strong></td>
+              <td>残障人士就业服务机构、雇主和项目参与者。</td>
+              <td>就业准备、技能培训、就业安置、雇主支持等；个人通常通过服务机构参与。</td>
+              <td><a href="https://www.canada.ca/en/employment-social-development/services/funding/opportunities-disabilities.html">Opportunities Fund</a></td>
+            </tr>
+            <tr>
+              <td><strong>Accessible Canada / Accessibility programs</strong></td>
+              <td>公共、非营利、社区或雇主项目；个人可受益于无障碍改善。</td>
+              <td>无障碍标准、项目资助、社区设施改善、信息无障碍和就业无障碍。</td>
+              <td><a href="https://www.canada.ca/en/employment-social-development/programs/accessible-canada.html">Accessible Canada</a></td>
+            </tr>
+            <tr>
+              <td><strong>Benefits Finder</strong></td>
+              <td>所有想筛选福利的人士。</td>
+              <td>按居住地、年龄、家庭、收入、残障和就业情况筛选联邦/省级福利。</td>
+              <td><a href="https://benefitsfinder.services.gc.ca/hm?GoCTemplateCulture=en-CA">Benefits Finder</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="provincial-summary">
+        <h2>各省/地区速览</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>地区</th>
+              <th>收入支持</th>
+              <th>儿童/家庭支持</th>
+              <th>辅助器具/照护/社区支持</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ontario 安省</td><td>ODSP</td><td>ACSD、SSAH、OAP</td><td>ADP、Passport、DSO、Home and Community Care</td></tr>
+            <tr><td>British Columbia 卑诗省</td><td>Disability Assistance / PWD</td><td>Children and Youth with Support Needs、Autism Funding</td><td>CLBC、医疗设备和社区生活支持</td></tr>
+            <tr><td>Alberta 阿省</td><td>AISH、Income Support</td><td>FSCD</td><td>PDD、AADL、就业与社区支持</td></tr>
+            <tr><td>Saskatchewan 萨省</td><td>SAID、Income Support</td><td>儿童残障相关补助和家庭服务</td><td>Cognitive Disability Strategy、辅助器具/健康福利</td></tr>
+            <tr><td>Manitoba 曼省</td><td>EIA for Persons with Disabilities、Rent Assist</td><td>Children’s disABILITY Services</td><td>Community Living disABILITY Services、健康/设备福利</td></tr>
+            <tr><td>Quebec 魁省</td><td>Social Solidarity Program</td><td>家庭补助、残障儿童补充福利、CLSC/CIUSSS 服务</td><td>身体/智力障碍和自闭症服务、辅助器具、家庭支持</td></tr>
+            <tr><td>New Brunswick 新不伦瑞克</td><td>Social Assistance</td><td>儿童家庭服务、残障家庭支持</td><td>Disability Support Program、长期照护/社区支持</td></tr>
+            <tr><td>Nova Scotia 新斯科舍</td><td>Employment Support and Income Assistance</td><td>家庭/儿童特殊需求服务</td><td>Disability Support Program、Flex/Individualized Funding</td></tr>
+            <tr><td>Prince Edward Island 爱德华王子岛</td><td>Assured Income through AccessAbility Supports、Social Assistance</td><td>AccessAbility Supports</td><td>个人支持、respite、住房/车辆改造、社区参与</td></tr>
+            <tr><td>Newfoundland and Labrador 纽芬兰与拉布拉多</td><td>Income Support、NL Disability Benefit</td><td>Child Benefit、健康相关服务</td><td>Disability Policy Office、健康服务、支持信托</td></tr>
+            <tr><td>Yukon 育空</td><td>Social Assistance、Yukon Supplementary Allowance</td><td>家庭和儿童服务</td><td>残障服务、社区支持、医疗旅行/设备相关支持</td></tr>
+            <tr><td>Northwest Territories 西北地区</td><td>Income Assistance</td><td>儿童/家庭支持</td><td>Persons with Disabilities services、收入安全项目、社区和健康服务</td></tr>
+            <tr><td>Nunavut 努纳武特</td><td>Income Assistance</td><td>家庭服务</td><td>社区社会服务办公室、健康服务、残障支持转介</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="provinces">
+        <h2>各省/地区详细清单</h2>
+
+        <article class="province">
+          <h3>Ontario 安省 <small>重点：ODSP、ADP、ACSD、SSAH、OAP、Passport</small></h3>
+          <div class="tagrow"><span class="tag">收入支持</span><span class="tag">儿童特殊需求</span><span class="tag">辅助器具</span><span class="tag">发育障碍成人</span></div>
+          <div class="two">
+            <div>
+              <h4>主要项目</h4>
+              <ul>
+                <li><a href="https://www.ontario.ca/page/ontario-disability-support-program">Ontario Disability Support Program (ODSP)</a>：残障成年人收入、就业和健康福利。</li>
+                <li><a href="https://www.ontario.ca/page/assistive-devices-program">Assistive Devices Program (ADP)</a>：轮椅、助行、听力、呼吸、视觉、沟通等辅助器具。</li>
+                <li><a href="https://www.ontario.ca/page/assistance-children-severe-disabilities-program">Assistance for Children with Severe Disabilities (ACSD)</a>：严重残障儿童家庭的额外费用支持。</li>
+                <li><a href="https://www.ontario.ca/page/special-services-home">Special Services at Home (SSAH)</a>：儿童和青少年个人成长、家庭 respite 等。</li>
+                <li><a href="https://www.ontario.ca/page/ontario-autism-program">Ontario Autism Program (OAP)</a>：自闭症儿童/青少年服务。</li>
+                <li><a href="https://www.ontario.ca/page/passport-program-adults-developmental-disability">Passport Program</a> 与 <a href="https://www.dsontario.ca/">Developmental Services Ontario</a>：发育障碍成人社区参与、respite、个人支持。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>申请提示</h4>
+              <ul>
+                <li>ODSP 常需医学证明、收入/资产资料、住房成本、家庭成员资料。</li>
+                <li>18 岁前后要提前规划：儿童项目、学校 IEP、成人 DSO/Passport、ODSP 之间的衔接可能有等待期。</li>
+                <li>需要器具时，通常先找授权评估员或医疗专业人士评估，再申请 ADP。</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="province">
+          <h3>British Columbia 卑诗省 <small>重点：PWD、CYSN、CLBC</small></h3>
+          <div class="tagrow"><span class="tag">收入支持</span><span class="tag">儿童/青少年</span><span class="tag">社区生活</span></div>
+          <ul>
+            <li><a href="https://www2.gov.bc.ca/gov/content/family-social-supports/services-for-people-with-disabilities/disability-assistance">Disability Assistance / Persons with Disabilities (PWD)</a>：面向符合 PWD 资格者的收入和健康相关支持。</li>
+            <li><a href="https://www2.gov.bc.ca/gov/content/health/managing-your-health/child-behaviour-development/support-needs">Children and Youth with Support Needs</a>：儿童/青少年特殊需求、家庭支持、行为和发展服务入口。</li>
+            <li><a href="https://www2.gov.bc.ca/gov/content/health/managing-your-health/child-behaviour-development/autism">Autism Information and Services</a>：自闭症诊断、资金和服务信息。</li>
+            <li><a href="https://www.communitylivingbc.ca/">Community Living BC (CLBC)</a>：发育障碍成人，以及符合条件的 FASD/ASD 成人社区支持、居住和就业/生活技能服务。</li>
+            <li><a href="https://www2.gov.bc.ca/gov/content/health/accessing-health-care/tap-bc">Travel Assistance Program</a>：符合条件的医疗旅行折扣/支持；也可查当地 health authority 的设备和居家照护。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Alberta 阿省 <small>重点：AISH、FSCD、PDD、AADL</small></h3>
+          <ul>
+            <li><a href="https://www.alberta.ca/aish">Assured Income for the Severely Handicapped (AISH)</a>：严重且长期残障成年人收入和健康福利。</li>
+            <li><a href="https://www.alberta.ca/aish-benefits">AISH benefits</a>：生活津贴、儿童福利、健康福利和个人福利说明。</li>
+            <li><a href="https://www.alberta.ca/family-support-for-children-with-disabilities-fscd">Family Support for Children with Disabilities (FSCD)</a>：残障儿童家庭支持、respite、设备、治疗相关服务。</li>
+            <li><a href="https://www.alberta.ca/persons-with-developmental-disabilities-pdd">Persons with Developmental Disabilities (PDD)</a>：发育障碍成人居家、社区参与、就业和个人支持。</li>
+            <li><a href="https://www.alberta.ca/aids-to-daily-living">Alberta Aids to Daily Living (AADL)</a>：助听、轮椅、呼吸、假肢、造口等长期医疗设备和用品。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Saskatchewan 萨省 <small>重点：SAID、认知障碍支持</small></h3>
+          <ul>
+            <li><a href="https://www.saskatchewan.ca/residents/family-and-social-support/people-with-disabilities/income-support-for-people-with-disabilities">Saskatchewan Assured Income for Disability (SAID)</a>：为有重大且长期残障的人提供收入支持。</li>
+            <li><a href="https://www.saskatchewan.ca/residents/family-and-social-support/people-with-disabilities">People with Disabilities</a>：残障服务总入口。</li>
+            <li><a href="https://www.saskatchewan.ca/residents/family-and-social-support/people-with-disabilities/cognitive-disability-strategy">Cognitive Disability Strategy</a>：认知障碍人士的个人化支持、社区参与和家庭支持。</li>
+            <li><a href="https://www.saskatchewan.ca/residents/health/accessing-health-care-services/health-services-for-people-with-disabilities">Health services for people with disabilities</a>：医疗、辅助器具和相关服务入口。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Manitoba 曼省 <small>重点：EIA、Children’s disABILITY Services、CLDS</small></h3>
+          <ul>
+            <li><a href="https://www.gov.mb.ca/fs/eia/eia_disability.html">Employment and Income Assistance for Persons with Disabilities</a>：残障人士基本生活、住房和健康相关支持。</li>
+            <li><a href="https://www.gov.mb.ca/fs/eia/rent_assist.html">Rent Assist</a>：低收入租房补助，EIA 内外均可能适用。</li>
+            <li><a href="https://www.gov.mb.ca/fs/cds/index.html">Children’s disABILITY Services</a>：儿童发展、respite、护理、设备和家庭支持。</li>
+            <li><a href="https://www.gov.mb.ca/fs/pwd/index.html">Community Living disABILITY Services</a>：智力障碍成人的居住、日间活动、就业和个人支持。</li>
+            <li><a href="https://www.gov.mb.ca/health/mhsip/index.html">Manitoba Health programs</a>：可进一步查医疗设备、药物和家庭照护支持。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Quebec 魁省 <small>重点：Social Solidarity、CLSC/CIUSSS、残障儿童补充福利</small></h3>
+          <ul>
+            <li><a href="https://www.quebec.ca/en/family-and-support-for-individuals/social-assistance-social-solidarity">Social Assistance and Social Solidarity</a>：社会援助和社会团结项目总入口。</li>
+            <li><a href="https://www.quebec.ca/en/family-and-support-for-individuals/social-assistance-social-solidarity/social-solidarity-program">Social Solidarity Program</a>：严重就业能力受限者收入支持。</li>
+            <li><a href="https://www.quebec.ca/en/health/health-system-and-services/services-for-people-with-a-physical-or-intellectual-disability-or-autism-spectrum-disorder">Services for people with a physical or intellectual disability or autism</a>：CLSC/CIUSSS 评估、家庭支持、康复、社区服务入口。</li>
+            <li><a href="https://www.retraitequebec.gouv.qc.ca/en/children/child-assistance/Pages/supplement-for-handicapped-children.aspx">Supplement for Handicapped Children</a>：残障儿童补充福利。</li>
+            <li><a href="https://www.ramq.gouv.qc.ca/en/citizens/aid-programs">RAMQ aid programs</a>：辅助器具、假肢、视听相关项目等。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>New Brunswick 新不伦瑞克 <small>重点：Disability Support Program、Social Assistance</small></h3>
+          <ul>
+            <li><a href="https://www2.gnb.ca/content/gnb/en/services/services_renderer.10295.Disability_Support_Program.html">Disability Support Program</a>：成人残障人士的个人化支持、respite、社区参与、辅助技术、家居支持等。</li>
+            <li><a href="https://www2.gnb.ca/content/gnb/en/departments/social_development/social_assistance.html">Social Assistance</a>：低收入人士基本生活支持；残障人士可咨询是否有相关附加福利。</li>
+            <li><a href="https://www2.gnb.ca/content/gnb/en/departments/social_development/persons_disabilities.html">Persons with Disabilities</a>：残障服务总入口。</li>
+            <li><a href="https://www2.gnb.ca/content/gnb/en/departments/health.html">Health programs</a>：药物、设备、长期照护和家庭支持相关入口。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Nova Scotia 新斯科舍 <small>重点：DSP、ESIA、Flex/Individualized Funding</small></h3>
+          <ul>
+            <li><a href="https://novascotia.ca/coms/disabilities/DisabilitySupportProgram.html">Disability Support Program (DSP)</a>：残障人士居住、家庭支持、社区参与、直接资助和个人化支持。</li>
+            <li><a href="https://novascotia.ca/coms/employment/">Employment Support and Income Assistance (ESIA)</a>：低收入和就业支持。</li>
+            <li><a href="https://novascotia.ca/coms/disabilities/FlexProgram.html">Flex Individualized Funding</a>：帮助符合条件的人购买与个人计划相关的支持。</li>
+            <li><a href="https://novascotia.ca/dhw/">Department of Health and Wellness</a>：居家护理、长期照护和健康设备相关入口。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Prince Edward Island 爱德华王子岛 <small>重点：AccessAbility Supports</small></h3>
+          <ul>
+            <li><a href="https://www.princeedwardisland.ca/en/information/social-development-and-seniors/accessability-supports">AccessAbility Supports</a>：涵盖个人支持、respite、社区参与、生活技能、住房/车辆改造、辅助设备和 assured income。</li>
+            <li><a href="https://www.princeedwardisland.ca/en/topic/social-assistance">Social Assistance</a>：低收入基本生活支持。</li>
+            <li><a href="https://www.princeedwardisland.ca/en/topic/disability-supports">Disability Supports</a>：残障服务和申请入口。</li>
+            <li><a href="https://www.princeedwardisland.ca/en/information/health-pei/home-care-program">Home Care Program</a>：居家护理、护理评估和健康支持。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Newfoundland and Labrador 纽芬兰与拉布拉多 <small>重点：Income Support、NL Disability Benefit、健康相关服务</small></h3>
+          <ul>
+            <li><a href="https://www.gov.nl.ca/sswb/income-support/">Income Support</a>：基本生活、住房、健康相关服务、儿童福利和支持信托入口。</li>
+            <li><a href="https://www.gov.nl.ca/sswb/disabilities/">Disability Policy Office</a>：残障政策、无障碍和相关项目入口。</li>
+            <li><a href="https://www.gov.nl.ca/sswb/disabilities/disability-benefit/">Newfoundland and Labrador Disability Benefit</a>：省级残障福利入口。</li>
+            <li><a href="https://www.gov.nl.ca/sswb/income-support/health-related-services/">Health Related Services</a>：收入支持受助人的医疗、药物和相关费用支持。</li>
+            <li><a href="https://www.gov.nl.ca/sswb/income-support/support-trusts/">Support Trusts</a>：残障人士资产/信托安排相关规则。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Yukon 育空 <small>重点：Social Assistance、Supplementary Allowance</small></h3>
+          <ul>
+            <li><a href="https://yukon.ca/en/social-supports/income-support/apply-social-assistance">Social Assistance</a>：低收入人士基本生活支持。</li>
+            <li><a href="https://yukon.ca/en/social-supports/income-support/apply-yukon-supplementary-allowance">Yukon Supplementary Allowance</a>：面向因年龄或残障等原因不能工作的低收入人士。</li>
+            <li><a href="https://yukon.ca/en/social-supports">Social supports</a>：家庭、儿童、收入和残障相关支持总入口。</li>
+            <li><a href="https://yukon.ca/en/health-and-wellness/care-services">Care services</a>：居家护理、长期照护和社区健康服务入口。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Northwest Territories 西北地区 <small>重点：Income Assistance、Income Security、残障服务</small></h3>
+          <ul>
+            <li><a href="https://www.ece.gov.nt.ca/en/services/income-security-programs/income-assistance">Income Assistance</a>：基本生活、住房、公用事业、儿童和特殊需求支持。</li>
+            <li><a href="https://www.ece.gov.nt.ca/en/services/income-security-programs">Income Security Programs</a>：收入安全项目总入口。</li>
+            <li><a href="https://www.hss.gov.nt.ca/en/services/persons-disabilities">Services for Persons with Disabilities</a>：残障人士健康和社会服务入口。</li>
+            <li><a href="https://www.hss.gov.nt.ca/en/services/home-and-community-care">Home and Community Care</a>：居家和社区护理服务。</li>
+          </ul>
+        </article>
+
+        <article class="province">
+          <h3>Nunavut 努纳武特 <small>重点：Income Assistance、本地社区办公室</small></h3>
+          <ul>
+            <li><a href="https://www.gov.nu.ca/en/family-services/programs-services/income-assistance">Income Assistance</a>：基本生活支持，申请通常通过当地社区社会服务办公室。</li>
+            <li><a href="https://www.gov.nu.ca/en/family-services">Family Services</a>：家庭、收入和社会服务入口。</li>
+            <li><a href="https://www.gov.nu.ca/en/health">Department of Health</a>：医疗、旅行、居家和社区健康相关入口。</li>
+            <li><a href="https://www.gov.nu.ca/en/family-services/programs-services">Programs and Services</a>：查找本地适用项目和联系办公室。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="documents">
+        <h2>申请前准备材料</h2>
+        <div class="checklist">
+          <ul>
+            <li>身份证明：SIN、出生证明/护照/PR 卡/公民证明、健康卡、省内居住证明。</li>
+            <li>医学证明：诊断报告、功能限制说明、心理/教育评估、医生/治疗师/护士执业师表格。</li>
+            <li>收入和资产：报税 Notice of Assessment、银行流水、工资、保险、CPP-D、EI、配偶收入、房租/房贷和水电账单。</li>
+            <li>儿童资料：学校 IEP、心理教育评估、语言/职业/物理治疗报告、行为计划、照护时间和额外费用记录。</li>
+            <li>设备/改造：专业评估、报价单、处方、供应商信息、照片、维修/更换记录。</li>
+            <li>照护记录：respite 需求、家属照护时数、夜间照护、危机事件、社区参与限制和交通需求。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>申请策略</h2>
+        <ol>
+          <li><strong>先打开联邦 DTC：</strong>若符合 DTC，后续 CDB、RDSP、Canada Disability Benefit 和部分省级/非营利资助会更顺。</li>
+          <li><strong>收入支持和服务支持分开申请：</strong>很多省份的收入补助、发育障碍服务、儿童特殊需求和辅助器具是不同部门，不会自动互通。</li>
+          <li><strong>18 岁转衔提前 12-24 个月：</strong>儿童福利、学校支持、成人发育障碍服务、监护/授权、ODSP/AISH/PWD 等常有等待和评估。</li>
+          <li><strong>保留所有收据和证明：</strong>税务抵免、医疗费用、respite、交通、设备和装修费用经常需要收据。</li>
+          <li><strong>用 211 和本地服务导航补空白：</strong>政府项目之外，许多城市有 food bank、交通补助、日间项目、法律援助、心理健康和照护者团体。</li>
+        </ol>
+      </section>
+
+      <section id="sources">
+        <h2>官方资料源与常用入口</h2>
+        <p class="muted">以下链接用于本汇总的核对和延伸查询。页面导出为 PDF 后，链接仍可点击。</p>
+        <ul class="source-list">
+          <li><a href="https://www.canada.ca/en/services/benefits/disability.html">Government of Canada: Disability benefits</a></li>
+          <li><a href="https://www.canada.ca/en/services/benefits/disability/canada-disability-benefit.html">Canada Disability Benefit</a></li>
+          <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html">Disability Tax Credit</a></li>
+          <li><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/child-disability-benefit.html">Child Disability Benefit</a></li>
+          <li><a href="https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-disability-benefit.html">CPP Disability Benefit</a></li>
+          <li><a href="https://www.canada.ca/en/employment-social-development/programs/disability/savings.html">RDSP, Grant and Bond</a></li>
+          <li><a href="https://benefitsfinder.services.gc.ca/hm?GoCTemplateCulture=en-CA">Benefits Finder</a></li>
+          <li><a href="https://211.ca/">211 Canada</a></li>
+          <li><a href="https://www.ontario.ca/page/ontario-disability-support-program">Ontario ODSP</a></li>
+          <li><a href="https://www.ontario.ca/page/assistive-devices-program">Ontario ADP</a></li>
+          <li><a href="https://www.ontario.ca/page/assistance-children-severe-disabilities-program">Ontario ACSD</a></li>
+          <li><a href="https://www.ontario.ca/page/special-services-home">Ontario SSAH</a></li>
+          <li><a href="https://www.ontario.ca/page/ontario-autism-program">Ontario Autism Program</a></li>
+          <li><a href="https://www.ontario.ca/page/passport-program-adults-developmental-disability">Ontario Passport Program</a></li>
+          <li><a href="https://www2.gov.bc.ca/gov/content/family-social-supports/services-for-people-with-disabilities/disability-assistance">BC Disability Assistance</a></li>
+          <li><a href="https://www2.gov.bc.ca/gov/content/health/managing-your-health/child-behaviour-development/support-needs">BC Children and Youth with Support Needs</a></li>
+          <li><a href="https://www.communitylivingbc.ca/">Community Living BC</a></li>
+          <li><a href="https://www.alberta.ca/aish">Alberta AISH</a></li>
+          <li><a href="https://www.alberta.ca/family-support-for-children-with-disabilities-fscd">Alberta FSCD</a></li>
+          <li><a href="https://www.alberta.ca/persons-with-developmental-disabilities-pdd">Alberta PDD</a></li>
+          <li><a href="https://www.alberta.ca/aids-to-daily-living">Alberta AADL</a></li>
+          <li><a href="https://www.saskatchewan.ca/residents/family-and-social-support/people-with-disabilities/income-support-for-people-with-disabilities">Saskatchewan SAID</a></li>
+          <li><a href="https://www.saskatchewan.ca/residents/family-and-social-support/people-with-disabilities/cognitive-disability-strategy">Saskatchewan Cognitive Disability Strategy</a></li>
+          <li><a href="https://www.gov.mb.ca/fs/eia/eia_disability.html">Manitoba EIA Disability</a></li>
+          <li><a href="https://www.gov.mb.ca/fs/cds/index.html">Manitoba Children’s disABILITY Services</a></li>
+          <li><a href="https://www.gov.mb.ca/fs/pwd/index.html">Manitoba Community Living disABILITY Services</a></li>
+          <li><a href="https://www.quebec.ca/en/family-and-support-for-individuals/social-assistance-social-solidarity">Quebec Social Assistance and Social Solidarity</a></li>
+          <li><a href="https://www.quebec.ca/en/health/health-system-and-services/services-for-people-with-a-physical-or-intellectual-disability-or-autism-spectrum-disorder">Quebec disability/autism services</a></li>
+          <li><a href="https://www.retraitequebec.gouv.qc.ca/en/children/child-assistance/Pages/supplement-for-handicapped-children.aspx">Quebec Supplement for Handicapped Children</a></li>
+          <li><a href="https://www2.gnb.ca/content/gnb/en/services/services_renderer.10295.Disability_Support_Program.html">New Brunswick Disability Support Program</a></li>
+          <li><a href="https://novascotia.ca/coms/disabilities/DisabilitySupportProgram.html">Nova Scotia Disability Support Program</a></li>
+          <li><a href="https://www.princeedwardisland.ca/en/information/social-development-and-seniors/accessability-supports">PEI AccessAbility Supports</a></li>
+          <li><a href="https://www.gov.nl.ca/sswb/income-support/">Newfoundland and Labrador Income Support</a></li>
+          <li><a href="https://www.gov.nl.ca/sswb/disabilities/">Newfoundland and Labrador Disability Policy Office</a></li>
+          <li><a href="https://yukon.ca/en/social-supports/income-support/apply-social-assistance">Yukon Social Assistance</a></li>
+          <li><a href="https://yukon.ca/en/social-supports/income-support/apply-yukon-supplementary-allowance">Yukon Supplementary Allowance</a></li>
+          <li><a href="https://www.ece.gov.nt.ca/en/services/income-security-programs/income-assistance">NWT Income Assistance</a></li>
+          <li><a href="https://www.hss.gov.nt.ca/en/services/persons-disabilities">NWT Persons with Disabilities</a></li>
+          <li><a href="https://www.gov.nu.ca/en/family-services/programs-services/income-assistance">Nunavut Income Assistance</a></li>
+          <li><a href="https://www.gov.nu.ca/en/family-services">Nunavut Family Services</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      本页为信息汇总，不构成法律、税务或医疗建议。申请资格以各政府部门和项目办公室的最新决定为准。整理日期：2026-06-14。
+    </footer>
+  </div>
+</body>
+</html>
