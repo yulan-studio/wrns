@@ -370,7 +370,29 @@
         border-bottom: none;
       }
     }
-  </style>
+  
+/* Width consistency fix */
+body {
+  overflow-x: auto;
+}
+
+.page {
+  width: max-content;
+  min-width: 100%;
+  overflow: visible;
+}
+
+table {
+  width: 100%;
+}
+
+@media (max-width: 880px) {
+  .page {
+    min-width: 1180px; /* match desktop content width so background extends with tables */
+  }
+}
+
+</style>
 </head>
 <body>
   <div class="page">
